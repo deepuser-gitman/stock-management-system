@@ -48,7 +48,7 @@
                     </a>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="" class="form-validate is-alter">
+                    <form method="POST" action="" class="form-validate is-alter" enctype="multipart/form-data">
                         {% csrf_token %}
                       {{form|crispy}}
                     <div class="form-group">

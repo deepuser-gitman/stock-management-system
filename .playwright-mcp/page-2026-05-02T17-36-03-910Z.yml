@@ -1,0 +1,105 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "logo logo-dark logo-small" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e8]
+          - img "logo-dark" [ref=e9]
+          - img "logo-small" [ref=e10]
+        - generic [ref=e11]:
+          - link "" [ref=e12] [cursor=pointer]:
+            - /url: "#"
+            - emphasis [ref=e13]: 
+          - text: 
+      - list [ref=e22]:
+        - listitem [ref=e23]:
+          - heading "Navigation" [level=6] [ref=e24]
+        - listitem [ref=e25]:
+          - link " Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+            - emphasis [ref=e28]: 
+            - generic [ref=e29]: Home
+        - listitem [ref=e30]:
+          - link " Add Stock" [ref=e31] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e33]: 
+            - generic [ref=e34]: Add Stock
+        - listitem [ref=e35]:
+          - link " View Stock" [ref=e36] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e38]: 
+            - generic [ref=e39]: View Stock
+        - listitem [ref=e40]:
+          - link " View History" [ref=e41] [cursor=pointer]:
+            - /url: /view_history
+            - emphasis [ref=e43]: 
+            - generic [ref=e44]: View History
+        - listitem [ref=e45]:
+          - link " Add Dependent Forms" [ref=e46] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e48]: 
+            - generic [ref=e49]: Add Dependent Forms
+        - listitem [ref=e50]:
+          - link " View Dependent Forms" [ref=e51] [cursor=pointer]:
+            - /url: /depend_form_view
+            - emphasis [ref=e53]: 
+            - generic [ref=e54]: View Dependent Forms
+        - text: 
+        - listitem [ref=e55]:
+          - link " Contacts" [ref=e56] [cursor=pointer]:
+            - /url: /contacts
+            - emphasis [ref=e58]: 
+            - generic [ref=e59]: Contacts
+        - text: 
+    - generic [ref=e60]:
+      - generic [ref=e63]:
+        - link "" [ref=e65] [cursor=pointer]:
+          - /url: "#"
+          - emphasis [ref=e66]: 
+        - link "logo logo-dark" [ref=e68] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e69]
+          - img "logo-dark" [ref=e70]
+        - generic [ref=e71]:
+          - emphasis [ref=e72]: 
+          - textbox "Search anything" [ref=e73]
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "" [ref=e77] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e78]:
+                - emphasis [ref=e80]: 
+                - text: 
+            - text:  
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - generic:
+            - generic:
+              - heading [level=3]
+        - generic [ref=e91]:
+          - heading "Issue i1" [level=5] [ref=e93]
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96] [cursor=pointer]: Issue quantity
+              - spinbutton "Issue quantity" [ref=e98]: "0"
+            - generic [ref=e99]:
+              - generic [ref=e100] [cursor=pointer]: Issued to
+              - textbox "Issued to" [ref=e102]
+            - button "Submit" [ref=e103] [cursor=pointer]
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - text: © 2021 Stock Inventory by
+          - link "John Doe" [ref=e108] [cursor=pointer]:
+            - /url: javascript:void
+        - generic:
+          - list
+  - log [ref=e109]
+  - log [ref=e110]
+  - log [ref=e111]
+  - log [ref=e112]
+  - log [ref=e113]
+  - log [ref=e114]
+  - log [ref=e115]
+  - log [ref=e116]
+  - log [ref=e117]

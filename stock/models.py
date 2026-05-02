@@ -33,7 +33,7 @@ class Stock(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     date = models.DateTimeField(auto_now_add=False, auto_now=False)
     export_to_csv = models.BooleanField(default=False)
-    image = models.ImageField(upload_to='stock/static/images', null=True, blank=True)
+    image = models.ImageField(upload_to='items', null=True, blank=True)
 
     def __str__(self):
         return self.item_name + " " + str(self.quantity) + " " + str(self.last_updated)
@@ -115,9 +115,9 @@ class Contacts(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(max_length=100, blank=True, null=True)
     occupation = models.CharField(max_length=100, blank=True, null=True)
-    phone = models.CharField(max_length=100, blank=100, null=True)
+    phone = models.CharField(max_length=100, blank=True, null=True)
     location = models.CharField(max_length=100, blank=True, null=True)
-    image = models.ImageField(upload_to='stock/static/images', null=True, blank=True)
+    image = models.ImageField(upload_to='contacts', null=True, blank=True)
 
     def __str__(self):
         return str(self.name)

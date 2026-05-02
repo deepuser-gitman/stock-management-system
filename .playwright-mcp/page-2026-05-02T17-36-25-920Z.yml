@@ -1,0 +1,154 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e8]
+          - img [ref=e9]
+          - img [ref=e10]
+        - generic [ref=e11]:
+          - link [ref=e12] [cursor=pointer]:
+            - /url: "#"
+            - emphasis [ref=e13]: 
+          - text: 
+      - list [ref=e22]:
+        - listitem [ref=e23]:
+          - heading [level=6] [ref=e24]: Navigation
+        - listitem [ref=e25]:
+          - link [ref=e26] [cursor=pointer]:
+            - /url: /
+            - emphasis [ref=e28]: 
+            - generic [ref=e29]: Home
+        - listitem [ref=e30]:
+          - link [ref=e31] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e33]: 
+            - generic [ref=e34]: Add Stock
+        - listitem [ref=e35]:
+          - link [ref=e36] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e38]: 
+            - generic [ref=e39]: View Stock
+        - listitem [ref=e40]:
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /view_history
+            - emphasis [ref=e43]: 
+            - generic [ref=e44]: View History
+        - listitem [ref=e45]:
+          - link [ref=e46] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e48]: 
+            - generic [ref=e49]: Add Dependent Forms
+        - listitem [ref=e50]:
+          - link [ref=e51] [cursor=pointer]:
+            - /url: /depend_form_view
+            - emphasis [ref=e53]: 
+            - generic [ref=e54]: View Dependent Forms
+        - text: 
+        - listitem [ref=e55]:
+          - link [ref=e56] [cursor=pointer]:
+            - /url: /contacts
+            - emphasis [ref=e58]: 
+            - generic [ref=e59]: Contacts
+        - text: 
+    - generic [ref=e60]:
+      - generic [ref=e63]:
+        - link [ref=e65] [cursor=pointer]:
+          - /url: "#"
+          - emphasis [ref=e66]: 
+        - link [ref=e68] [cursor=pointer]:
+          - /url: /
+          - img [ref=e69]
+          - img [ref=e70]
+        - generic [ref=e71]:
+          - emphasis [ref=e72]: 
+          - textbox [ref=e73]:
+            - /placeholder: Search anything
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link [ref=e77] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e78]:
+                - emphasis [ref=e80]: 
+                - text: 
+            - text:  
+      - generic [ref=e86]:
+        - heading [level=4] [ref=e89]: Stock Details
+        - generic [ref=e90]:
+          - link [ref=e91] [cursor=pointer]:
+            - /url: /issue_item/1/
+            - generic [ref=e92]: ISSUE THIS ITEM
+          - link [ref=e93] [cursor=pointer]:
+            - /url: /receive_item/1/
+            - generic [ref=e94]: RECEIVE THIS ITEM
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - searchbox [ref=e100]
+            - generic [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]: Show
+              - generic [ref=e106]:
+                - combobox [ref=e107]
+                - text: 
+          - grid [ref=e109]:
+            - rowgroup [ref=e110]:
+              - row [ref=e111]:
+                - columnheader [ref=e112] [cursor=pointer]: ↑ ITEM NAME ↓
+                - columnheader [ref=e113] [cursor=pointer]: ↑ QUANTITY IN STORE ↓
+                - columnheader [ref=e114] [cursor=pointer]: ↑ LAST UPDATED ↓
+                - columnheader [ref=e115] [cursor=pointer]: ↑ REORDER LEVEL ↓
+                - columnheader:
+                  - list [ref=e116] [cursor=pointer]:
+                    - listitem [ref=e117]:
+                      - link [ref=e119]:
+                        - /url: "#"
+                        - emphasis [ref=e120]: 
+            - rowgroup [ref=e121]:
+              - row [ref=e122]:
+                - gridcell [ref=e123]: i1
+                - gridcell [ref=e124]:
+                  - generic [ref=e125]: "7"
+                - gridcell [ref=e126]:
+                  - generic [ref=e127]: May 2, 2026, 5:36 p.m.
+                - gridcell [ref=e128]: "0"
+                - gridcell:
+                  - list [ref=e129]:
+                    - listitem [ref=e130]:
+                      - generic [ref=e131]:
+                        - link [ref=e132] [cursor=pointer]:
+                          - /url: "#"
+                          - emphasis [ref=e133]: 
+                        - text:  
+          - generic [ref=e134]:
+            - list [ref=e137]:
+              - listitem [ref=e138]:
+                - link:
+                  - /url: "#"
+                  - text: Prev
+              - listitem [ref=e139]:
+                - link [ref=e140] [cursor=pointer]:
+                  - /url: "#"
+                  - text: "1"
+              - listitem [ref=e141]:
+                - link:
+                  - /url: "#"
+                  - text: Next
+            - status [ref=e143]: 1 -1 of 1
+      - generic [ref=e147]:
+        - text: © 2021 Stock Inventory by
+        - link [ref=e148] [cursor=pointer]:
+          - /url: javascript:void
+          - text: John Doe
+  - dialog "Issued Successfully, 7 i1s now left in Store" [ref=e150]:
+    - heading "Issued Successfully, 7 i1s now left in Store" [level=2] [ref=e159]
+    - generic: "!"
+    - button "OK" [active] [ref=e161] [cursor=pointer]
+  - log [ref=e163]
+  - log [ref=e164]
+  - log [ref=e165]
+  - log [ref=e166]
+  - log [ref=e167]
+  - log [ref=e168]
+  - log [ref=e169]
+  - log [ref=e170]
+  - log [ref=e171]

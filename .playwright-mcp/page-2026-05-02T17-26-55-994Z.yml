@@ -1,0 +1,52 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "Page not found (404)" [level=1] [ref=e3]
+    - table [ref=e4]:
+      - rowgroup [ref=e5]:
+        - 'row "Request Method: GET" [ref=e6]':
+          - rowheader "Request Method:" [ref=e7]
+          - cell "GET" [ref=e8]
+        - 'row "Request URL: http://127.0.0.1:8000/accounts/login/?next=/" [ref=e9]':
+          - rowheader "Request URL:" [ref=e10]
+          - cell "http://127.0.0.1:8000/accounts/login/?next=/" [ref=e11]
+  - generic [ref=e12]:
+    - paragraph [ref=e13]:
+      - text: Using the URLconf defined in
+      - code [ref=e14]: stockmgtr.urls
+      - text: ", Django tried these URL patterns, in this order:"
+    - list [ref=e15]:
+      - listitem [ref=e16]: admin/
+      - listitem [ref=e17]: "[name='home']"
+      - listitem [ref=e18]: view_stock [name='view_stock']
+      - listitem [ref=e19]: add_stock [name='add_stock']
+      - listitem [ref=e20]: update_stock/<str:pk>/ [name='update_stock']
+      - listitem [ref=e21]: delete_stock/<str:pk>/ [name='delete_stock']
+      - listitem [ref=e22]: stock_detail/<str:pk>/ [name='stock_detail']
+      - listitem [ref=e23]: issue_item/<str:pk>/ [name='issue_item']
+      - listitem [ref=e24]: receive_item/<str:pk>/ [name='receive_item']
+      - listitem [ref=e25]: re_order/<str:pk>/ [name='re_order']
+      - listitem [ref=e26]: register [name='register']
+      - listitem [ref=e27]: view_history [name='view_history']
+      - listitem [ref=e28]: dependent_forms [name='dependent_forms']
+      - listitem [ref=e29]: dependent_update/<str:pk>/ [name='dependent_update']
+      - listitem [ref=e30]: depend_form_view [name='depend_form_view']
+      - listitem [ref=e31]: depend_form_delete/<str:pk> [name='delete_dependant']
+      - listitem [ref=e32]: ajax/load-states/ [name='ajax_load_states']
+      - listitem [ref=e33]: ajax/load-cities/ [name='ajax_load_cities']
+      - listitem [ref=e34]: scrumboard [name='scrumboard']
+      - listitem [ref=e35]: scrumboard_view [name='scrumboard_view']
+      - listitem [ref=e36]: contacts [name='contacts']
+      - listitem [ref=e37]: accounts/ register/ [name='django_registration_register']
+      - listitem [ref=e38]: accounts/ register/closed/ [name='django_registration_disallowed']
+      - listitem [ref=e39]: accounts/ register/complete/ [name='django_registration_complete']
+      - listitem [ref=e40]: ^media/(?P<path>.*)$
+    - paragraph [ref=e41]:
+      - text: The current path,
+      - code [ref=e42]: accounts/login/
+      - text: ", didn’t match any of these."
+  - paragraph [ref=e44]:
+    - text: You’re seeing this error because you have
+    - code [ref=e45]: DEBUG = True
+    - text: in your Django settings file. Change that to
+    - code [ref=e46]: "False"
+    - text: ", and Django will display a standard 404 page."

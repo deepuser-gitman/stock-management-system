@@ -39,11 +39,9 @@ def get_client_ip(request):
         ip = request.META.get('REMOTE_ADDR')
     u = User(user=ip)
     result = User.objects.filter(Q(user__icontains=ip))
-    if len(result) == 1:
-        pass
-    else:
+    if len(result) == 0:
         u.save()
-        return ip
+
     queryset = Stock.objects.all()
     querys = Category.objects.all()
     for chart in queryset:
@@ -55,9 +53,9 @@ def get_client_ip(request):
         labels.append(str(chart.group))
 
     count = User.objects.all().count()
-    body = Category.objects.values('stock').count()
-    mind = Category.objects.values('stockhistory').count()
-    soul = Category.objects.values('group').count()
+    body = Stock.objects.count()
+    mind = StockHistory.objects.count()
+    soul = Category.objects.count()
     context = {
         'count': count,
         'body': body,
@@ -154,9 +152,13 @@ def update_stock(request, pk):
     if request.method == 'POST':
         form = StockUpdateForm(request.POST, request.FILES, instance=update)
         if form.is_valid():
-            image_path = update.image.path
-            if os.path.exists(image_path):
-                os.remove(image_path)
+            if update.image:
+                try:
+                    image_path = update.image.path
+                    if os.path.exists(image_path):
+                        os.remove(image_path)
+                except Exception:
+                    pass
             form.save()
             messages.success(request, 'Successfully Updated!')
             return redirect('/view_stock')
@@ -258,13 +260,11 @@ def view_history(request):
     }
     if request.method == 'POST':
         category = form['category'].value()
-        history = StockHistory.objects.filter(item_name__icontains=form['item_name'].value(),
-
-                                              last_updated__range=[
-                                                                form['start_date'].value(),
-                                                                form['end_date'].value()
-                                              ]
-                                              )
+        history = StockHistory.objects.filter(item_name__icontains=form['item_name'].value())
+        start_date = form['start_date'].value()
+        end_date = form['end_date'].value()
+        if start_date and end_date:
+            history = history.filter(last_updated__range=[start_date, end_date])
         if category != '':
             history = history.filter(category_id=category)
 

@@ -1,0 +1,61 @@
+{% load crispy_forms_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login - Stock Management</title>
+    <link rel="stylesheet" href="{% static 'css/dashlite.css' %}">
+    <link id="skin-default" rel="stylesheet" href="{% static 'css/theme.css' %}">
+</head>
+<body class="nk-body npc-default">
+<div class="nk-app-root">
+    <div class="nk-main">
+        <div class="nk-wrap nk-wrap-nosidebar">
+            <div class="nk-content">
+                <div class="nk-split nk-split-page nk-split-md">
+                    <div class="nk-split-content nk-block-area nk-block-area-column nk-auth-container bg-white w-lg-45">
+                        <div class="nk-block nk-block-middle nk-auth-body">
+                            <div class="brand-logo pb-5">
+                                <a href="/" class="logo-link">
+                                    <img class="logo-light logo-img logo-img-lg" src="{% static 'images/logo.png' %}" alt="logo">
+                                </a>
+                            </div>
+                            <div class="nk-block-head">
+                                <div class="nk-block-head-content">
+                                    <h4 class="nk-block-title">Sign In</h4>
+                                    <div class="nk-block-des">
+                                        <p>Access the Stock Management dashboard using your credentials.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if form.errors %}
+                            <div class="alert alert-danger">
+                                Your username and password didn't match. Please try again.
+                            </div>
+                            {% endif %}
+                            <form method="POST" action="{% url 'login' %}">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                {% if next %}
+                                <input type="hidden" name="next" value="{{ next }}">
+                                {% endif %}
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
+                                </div>
+                            </form>
+                            <div class="form-note-s2 text-center pt-4">
+                                New on our platform? <a href="{% url 'register' %}">Create an account</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-split-content nk-split-stretch bg-abstract"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/bundle.js' %}"></script>
+</body>
+</html>
