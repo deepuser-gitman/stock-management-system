@@ -15,20 +15,16 @@ urlpatterns = [
     path("re_order/<str:pk>/", views.re_order, name="re_order"),
     path("register", views.new_register, name="register"),
     path("view_history", views.view_history, name="view_history"),
+    path("reports", views.reports, name="reports"),
     path("dependent_forms", views.dependent_forms, name="dependent_forms"),
-    path(
-        "dependent_update/<str:pk>/",
-        views.dependent_forms_update,
-        name="dependent_update",
-    ),
+    path("dependent_update/<str:pk>/", views.dependent_forms_update, name="dependent_update"),
     path("depend_form_view", views.dependent_forms_view, name="depend_form_view"),
-    path(
-        "depend_form_delete/<str:pk>", views.delete_dependant, name="delete_dependant"
-    ),
+    path("depend_form_delete/<str:pk>", views.delete_dependant, name="delete_dependant"),
     path("ajax/load-states/", views.load_stats, name="ajax_load_states"),
     path("ajax/load-cities/", views.load_cities, name="ajax_load_cities"),
     path("scrumboard", views.scrum_list, name="scrumboard"),
-    path("scrumboard_view", views.scrum_view, name="scrumboard_view"),
+    path("scrumboard_view", views.scrum_list, name="scrumboard_view"),
     path("contacts", views.contact, name="contacts"),
+    path("delete_contact/<str:pk>/", views.delete_contact, name="delete_contact"),
     path("accounts/", include("django_registration.backends.one_step.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

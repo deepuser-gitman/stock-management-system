@@ -51,58 +51,68 @@
             - /url: /contacts
             - emphasis [ref=e58]: 
             - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
         - text: 
-    - generic [ref=e60]:
-      - generic [ref=e63]:
-        - link "" [ref=e65] [cursor=pointer]:
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - link "" [ref=e70] [cursor=pointer]:
           - /url: "#"
-          - emphasis [ref=e66]: 
-        - link "logo logo-dark" [ref=e68] [cursor=pointer]:
+          - emphasis [ref=e71]: 
+        - link "logo logo-dark" [ref=e73] [cursor=pointer]:
           - /url: /
-          - img "logo" [ref=e69]
-          - img "logo-dark" [ref=e70]
-        - generic [ref=e71]:
-          - emphasis [ref=e72]: 
-          - textbox "Search anything" [ref=e73]
-        - list [ref=e75]:
-          - listitem [ref=e76]:
-            - link "" [ref=e77] [cursor=pointer]:
+          - img "logo" [ref=e74]
+          - img "logo-dark" [ref=e75]
+        - generic [ref=e76]:
+          - emphasis [ref=e77]: 
+          - textbox "Search anything" [ref=e78]
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - link "" [ref=e82] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e78]:
-                - emphasis [ref=e80]: 
+              - generic [ref=e83]:
+                - emphasis [ref=e85]: 
                 - text: 
             - text:  
-      - generic [ref=e86]:
-        - generic [ref=e87]:
-          - generic [ref=e90]:
-            - img [ref=e91]
-            - textbox "Search Contacts..." [ref=e94]
+      - generic [ref=e89]:
+        - generic [ref=e91]:
+          - heading "Contacts" [level=3] [ref=e93]
           - generic [ref=e95]:
-            - generic [ref=e96]:
-              - img [ref=e98] [cursor=pointer]
-              - generic [ref=e101]:
-                - img [ref=e102] [cursor=pointer]
-                - img [ref=e103] [cursor=pointer]
-            - text: 
-        - generic [ref=e110]:
-          - heading "Name" [level=4] [ref=e112]
-          - heading "Email" [level=4] [ref=e114]
-          - heading "Location" [level=4] [ref=e116]
-          - heading "Phone" [level=4] [ref=e118]
-          - img [ref=e120] [cursor=pointer]
-      - generic [ref=e124]:
-        - generic [ref=e125]:
-          - text: © 2026 Stock Inventory by
-          - link "John Doe" [ref=e126] [cursor=pointer]:
-            - /url: javascript:void
-        - generic:
-          - list
+            - textbox "Search contacts..." [ref=e96]
+            - button " Add Contact" [ref=e97] [cursor=pointer]:
+              - emphasis [ref=e98]: 
+              - text: Add Contact
+        - table [ref=e102]:
+          - rowgroup [ref=e103]:
+            - row "# Name Email Occupation Phone Location Actions" [ref=e104]:
+              - columnheader "#" [ref=e105]
+              - columnheader "Name" [ref=e106]
+              - columnheader "Email" [ref=e107]
+              - columnheader "Occupation" [ref=e108]
+              - columnheader "Phone" [ref=e109]
+              - columnheader "Location" [ref=e110]
+              - columnheader "Actions" [ref=e111]
+          - rowgroup [ref=e112]:
+            - row "No contacts yet. Click Add Contact to get started." [ref=e113]:
+              - cell "No contacts yet. Click Add Contact to get started." [ref=e114]:
+                - text: No contacts yet. Click
+                - strong [ref=e115]: Add Contact
+                - text: to get started.
+      - text: 
+      - generic [ref=e119]:
+        - text: © 2021 Stock Inventory by
+        - link "John Doe" [ref=e120] [cursor=pointer]:
+          - /url: "#"
+  - log [ref=e121]
+  - log [ref=e122]
+  - log [ref=e123]
+  - log [ref=e124]
+  - log [ref=e125]
+  - log [ref=e126]
   - log [ref=e127]
   - log [ref=e128]
   - log [ref=e129]
   - log [ref=e130]
-  - log [ref=e131]
-  - log [ref=e132]
-  - log [ref=e133]
-  - log [ref=e134]
-  - log [ref=e135]

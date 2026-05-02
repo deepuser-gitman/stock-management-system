@@ -1,0 +1,167 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "logo logo-dark logo-small" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e8]
+          - img "logo-dark" [ref=e9]
+          - img "logo-small" [ref=e10]
+        - generic [ref=e11]:
+          - text: 
+          - link "" [ref=e12] [cursor=pointer]:
+            - /url: "#"
+            - emphasis [ref=e13]: 
+      - list [ref=e22]:
+        - listitem [ref=e23]:
+          - heading "Navigation" [level=6] [ref=e24]
+        - listitem [ref=e25]:
+          - link " Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+            - emphasis [ref=e28]: 
+            - generic [ref=e29]: Home
+        - listitem [ref=e30]:
+          - link " Add Stock" [ref=e31] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e33]: 
+            - generic [ref=e34]: Add Stock
+        - listitem [ref=e35]:
+          - link " View Stock" [ref=e36] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e38]: 
+            - generic [ref=e39]: View Stock
+        - listitem [ref=e40]:
+          - link " View History" [ref=e41] [cursor=pointer]:
+            - /url: /view_history
+            - emphasis [ref=e43]: 
+            - generic [ref=e44]: View History
+        - listitem [ref=e45]:
+          - link " Add Dependent Forms" [ref=e46] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e48]: 
+            - generic [ref=e49]: Add Dependent Forms
+        - listitem [ref=e50]:
+          - link " View Dependent Forms" [ref=e51] [cursor=pointer]:
+            - /url: /depend_form_view
+            - emphasis [ref=e53]: 
+            - generic [ref=e54]: View Dependent Forms
+        - text: 
+        - listitem [ref=e55]:
+          - link " Contacts" [ref=e56] [cursor=pointer]:
+            - /url: /contacts
+            - emphasis [ref=e58]: 
+            - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
+        - text: 
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - text: 
+        - generic [ref=e69]:
+          - emphasis [ref=e70]: 
+          - textbox "Search anything" [ref=e71]
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - link " admin " [ref=e75] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e76]:
+                - emphasis [ref=e78]: 
+                - generic [ref=e80]: admin 
+            - text:  
+      - generic [ref=e84]:
+        - generic [ref=e86]:
+          - 'heading "Stock Detail: i1" [level=3] [ref=e88]'
+          - link " Back to Stock" [ref=e90] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e91]: 
+            - text: Back to Stock
+        - generic [ref=e92]:
+          - generic [ref=e95]:
+            - heading "Item Information" [level=5] [ref=e96]
+            - table [ref=e97]:
+              - rowgroup [ref=e98]:
+                - row "Item Name i1" [ref=e99]:
+                  - rowheader "Item Name" [ref=e100]
+                  - cell "i1" [ref=e101]
+                - row "Category c1" [ref=e102]:
+                  - rowheader "Category" [ref=e103]
+                  - cell "c1" [ref=e104]
+                - row "Quantity in Store 7" [ref=e105]:
+                  - rowheader "Quantity in Store" [ref=e106]
+                  - cell "7" [ref=e107]
+                - row "Reorder Level 0" [ref=e108]:
+                  - rowheader "Reorder Level" [ref=e109]
+                  - cell "0" [ref=e110]
+                - row "Last Updated 2026-05-02 17:36" [ref=e111]:
+                  - rowheader "Last Updated" [ref=e112]
+                  - cell "2026-05-02 17:36" [ref=e113]
+                - row "Created By -" [ref=e114]:
+                  - rowheader "Created By" [ref=e115]
+                  - cell "-" [ref=e116]
+                - row "Last Issued By admin" [ref=e117]:
+                  - rowheader "Last Issued By" [ref=e118]
+                  - cell "admin" [ref=e119]
+                - row "Last Issued To Test User" [ref=e120]:
+                  - rowheader "Last Issued To" [ref=e121]
+                  - cell "Test User" [ref=e122]
+                - row "Last Received By -" [ref=e123]:
+                  - rowheader "Last Received By" [ref=e124]
+                  - cell "-" [ref=e125]
+            - generic [ref=e126]:
+              - link " Issue" [ref=e127] [cursor=pointer]:
+                - /url: /issue_item/1/
+                - emphasis [ref=e128]: 
+                - text: Issue
+              - link " Receive" [ref=e129] [cursor=pointer]:
+                - /url: /receive_item/1/
+                - emphasis [ref=e130]: 
+                - text: Receive
+              - link " Edit" [ref=e131] [cursor=pointer]:
+                - /url: /update_stock/1/
+                - emphasis [ref=e132]: 
+                - text: Edit
+              - link " Reorder Level" [ref=e133] [cursor=pointer]:
+                - /url: /re_order/1/
+                - emphasis [ref=e134]: 
+                - text: Reorder Level
+              - link " Delete" [ref=e135] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e136]: 
+                - text: Delete
+          - generic [ref=e139]:
+            - heading "Recent Transaction History" [level=5] [ref=e140]
+            - table [ref=e142]:
+              - rowgroup [ref=e143]:
+                - row "Date Qty Issued Received By" [ref=e144]:
+                  - columnheader "Date" [ref=e145]
+                  - columnheader "Qty" [ref=e146]
+                  - columnheader "Issued" [ref=e147]
+                  - columnheader "Received" [ref=e148]
+                  - columnheader "By" [ref=e149]
+              - rowgroup [ref=e150]:
+                - row "2026-05-02 17:36 7 3 - admin" [ref=e151]:
+                  - cell "2026-05-02 17:36" [ref=e152]
+                  - cell "7" [ref=e153]
+                  - cell "3" [ref=e154]:
+                    - generic [ref=e155]: "3"
+                  - cell "-" [ref=e156]
+                  - cell "admin" [ref=e157]
+            - link "View Full History" [ref=e158] [cursor=pointer]:
+              - /url: /view_history?item_name=i1
+      - generic [ref=e162]:
+        - text: © 2021 Stock Inventory by
+        - link "John Doe" [ref=e163] [cursor=pointer]:
+          - /url: "#"
+  - log [ref=e164]
+  - log [ref=e165]
+  - log [ref=e166]
+  - log [ref=e167]
+  - log [ref=e168]
+  - log [ref=e169]
+  - log [ref=e170]
+  - log [ref=e171]
+  - log [ref=e172]
+  - log [ref=e173]

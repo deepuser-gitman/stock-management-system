@@ -8,10 +8,10 @@
           - img "logo-dark" [ref=e9]
           - img "logo-small" [ref=e10]
         - generic [ref=e11]:
-          - link "" [ref=e12] [cursor=pointer]:
+          - text: 
+          - link "" [ref=e12] [cursor=pointer]:
             - /url: "#"
-            - emphasis [ref=e13]: 
-          - text: 
+            - emphasis [ref=e13]: 
       - list [ref=e22]:
         - listitem [ref=e23]:
           - heading "Navigation" [level=6] [ref=e24]
@@ -51,58 +51,56 @@
             - /url: /contacts
             - emphasis [ref=e58]: 
             - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
         - text: 
-    - generic [ref=e60]:
-      - generic [ref=e63]:
-        - link "" [ref=e65] [cursor=pointer]:
-          - /url: "#"
-          - emphasis [ref=e66]: 
-        - link "logo logo-dark" [ref=e68] [cursor=pointer]:
-          - /url: /
-          - img "logo" [ref=e69]
-          - img "logo-dark" [ref=e70]
-        - generic [ref=e71]:
-          - emphasis [ref=e72]: 
-          - textbox "Search anything" [ref=e73]
-        - list [ref=e75]:
-          - listitem [ref=e76]:
-            - link "" [ref=e77] [cursor=pointer]:
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - text: 
+        - generic [ref=e69]:
+          - emphasis [ref=e70]: 
+          - textbox "Search anything" [ref=e71]
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - link " admin " [ref=e75] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e78]:
-                - emphasis [ref=e80]: 
-                - text: 
+              - generic [ref=e76]:
+                - emphasis [ref=e78]: 
+                - generic [ref=e80]: admin 
             - text:  
-      - generic [ref=e86]:
-        - generic [ref=e87]:
-          - generic [ref=e90]:
-            - img [ref=e91]
-            - textbox "Search Contacts..." [ref=e94]
-          - generic [ref=e95]:
-            - generic [ref=e96]:
-              - img [ref=e98] [cursor=pointer]
-              - generic [ref=e101]:
-                - img [ref=e102] [cursor=pointer]
-                - img [ref=e103] [cursor=pointer]
-            - text: 
-        - generic [ref=e110]:
-          - heading "Name" [level=4] [ref=e112]
-          - heading "Email" [level=4] [ref=e114]
-          - heading "Location" [level=4] [ref=e116]
-          - heading "Phone" [level=4] [ref=e118]
-          - img [ref=e120] [cursor=pointer]
-      - generic [ref=e124]:
-        - generic [ref=e125]:
-          - text: © 2026 Stock Inventory by
-          - link "John Doe" [ref=e126] [cursor=pointer]:
-            - /url: javascript:void
-        - generic:
-          - list
-  - log [ref=e127]
-  - log [ref=e128]
-  - log [ref=e129]
-  - log [ref=e130]
-  - log [ref=e131]
-  - log [ref=e132]
-  - log [ref=e133]
-  - log [ref=e134]
-  - log [ref=e135]
+      - generic [ref=e84]:
+        - generic [ref=e86]:
+          - heading "People Directory" [level=3] [ref=e88]
+          - link " Add Person" [ref=e90] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e91]: 
+            - generic [ref=e92]: Add Person
+        - table [ref=e94]:
+          - rowgroup [ref=e95]:
+            - row "# NAME COUNTRY STATE CITY" [ref=e96]:
+              - columnheader "#" [ref=e97]
+              - columnheader "NAME" [ref=e98]
+              - columnheader "COUNTRY" [ref=e99]
+              - columnheader "STATE" [ref=e100]
+              - columnheader "CITY" [ref=e101]
+              - columnheader
+          - rowgroup [ref=e102]:
+            - row "No people found." [ref=e103]:
+              - cell "No people found." [ref=e104]
+      - generic [ref=e108]:
+        - text: © 2021 Stock Inventory by
+        - link "John Doe" [ref=e109] [cursor=pointer]:
+          - /url: "#"
+  - log [ref=e110]
+  - log [ref=e111]
+  - log [ref=e112]
+  - log [ref=e113]
+  - log [ref=e114]
+  - log [ref=e115]
+  - log [ref=e116]
+  - log [ref=e117]
+  - log [ref=e118]
+  - log [ref=e119]

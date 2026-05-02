@@ -1,0 +1,206 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "logo logo-dark logo-small" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e8]
+          - img "logo-dark" [ref=e9]
+          - img "logo-small" [ref=e10]
+        - generic [ref=e11]:
+          - link "" [ref=e12] [cursor=pointer]:
+            - /url: "#"
+            - emphasis [ref=e13]: 
+          - text: 
+      - list [ref=e22]:
+        - listitem [ref=e23]:
+          - heading "Navigation" [level=6] [ref=e24]
+        - listitem [ref=e25]:
+          - link " Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+            - emphasis [ref=e28]: 
+            - generic [ref=e29]: Home
+        - listitem [ref=e30]:
+          - link " Add Stock" [ref=e31] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e33]: 
+            - generic [ref=e34]: Add Stock
+        - listitem [ref=e35]:
+          - link " View Stock" [ref=e36] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e38]: 
+            - generic [ref=e39]: View Stock
+        - listitem [ref=e40]:
+          - link " View History" [ref=e41] [cursor=pointer]:
+            - /url: /view_history
+            - emphasis [ref=e43]: 
+            - generic [ref=e44]: View History
+        - listitem [ref=e45]:
+          - link " Add Dependent Forms" [ref=e46] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e48]: 
+            - generic [ref=e49]: Add Dependent Forms
+        - listitem [ref=e50]:
+          - link " View Dependent Forms" [ref=e51] [cursor=pointer]:
+            - /url: /depend_form_view
+            - emphasis [ref=e53]: 
+            - generic [ref=e54]: View Dependent Forms
+        - text: 
+        - listitem [ref=e55]:
+          - link " Contacts" [ref=e56] [cursor=pointer]:
+            - /url: /contacts
+            - emphasis [ref=e58]: 
+            - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
+        - text: 
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - link "" [ref=e70] [cursor=pointer]:
+          - /url: "#"
+          - emphasis [ref=e71]: 
+        - link "logo logo-dark" [ref=e73] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e74]
+          - img "logo-dark" [ref=e75]
+        - generic [ref=e76]:
+          - emphasis [ref=e77]: 
+          - textbox "Search anything" [ref=e78]
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - link "" [ref=e82] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e83]:
+                - emphasis [ref=e85]: 
+                - text: 
+            - text:  
+      - generic [ref=e89]:
+        - generic [ref=e92]:
+          - heading "Reports" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Generate and export reports for stock, transactions, and alerts.
+        - generic [ref=e96]:
+          - heading "Report Parameters" [level=6] [ref=e97]
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101] [cursor=pointer]: Report Type
+              - combobox [ref=e102]:
+                - option "Stock Summary" [selected]
+                - option "Low Stock / Reorder Alert"
+                - option "Issue Report"
+                - option "Receive Report"
+                - option "Full Transaction History"
+            - generic [ref=e103]:
+              - generic [ref=e104] [cursor=pointer]: Format
+              - combobox [ref=e105]:
+                - option "View in Browser" [selected]
+                - option "Download CSV"
+            - generic [ref=e106]:
+              - generic [ref=e107] [cursor=pointer]: Category
+              - combobox [ref=e108]:
+                - option "All Categories" [selected]
+                - option "c1"
+                - option "g1"
+            - generic [ref=e109]:
+              - generic [ref=e110] [cursor=pointer]: Item Name (contains)
+              - textbox [ref=e111]
+            - generic [ref=e112]:
+              - generic [ref=e113] [cursor=pointer]: From Date
+              - textbox [ref=e114]
+            - generic [ref=e115]:
+              - generic [ref=e116] [cursor=pointer]: To Date
+              - textbox [ref=e117]
+            - generic [ref=e118]:
+              - button " Generate Report" [ref=e119] [cursor=pointer]:
+                - emphasis [ref=e120]: 
+                - text: Generate Report
+              - link "Reset" [ref=e121] [cursor=pointer]:
+                - /url: /reports
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - heading "Stock Summary" [level=5] [ref=e125]
+            - generic [ref=e126]: 2 record(s)
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - searchbox [ref=e133]
+              - generic [ref=e137] [cursor=pointer]:
+                - generic [ref=e138]: Show
+                - generic [ref=e139]:
+                  - combobox "Show " [ref=e140]:
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "100"
+                  - text: 
+            - generic [ref=e141]:
+              - grid [ref=e142]:
+                - rowgroup [ref=e143]:
+                  - 'row "#: activate to sort column descending Category: activate to sort column ascending Item Name: activate to sort column ascending Quantity: activate to sort column ascending Reorder Level: activate to sort column ascending Status: activate to sort column ascending Last Updated: activate to sort column ascending Created By: activate to sort column ascending" [ref=e144]':
+                    - 'columnheader "#: activate to sort column descending" [ref=e145] [cursor=pointer]': "↑ # ↓"
+                    - 'columnheader "Category: activate to sort column ascending" [ref=e146] [cursor=pointer]': ↑ Category ↓
+                    - 'columnheader "Item Name: activate to sort column ascending" [ref=e147] [cursor=pointer]': ↑ Item Name ↓
+                    - 'columnheader "Quantity: activate to sort column ascending" [ref=e148] [cursor=pointer]': ↑ Quantity ↓
+                    - 'columnheader "Reorder Level: activate to sort column ascending" [ref=e149] [cursor=pointer]': ↑ Reorder Level ↓
+                    - 'columnheader "Status: activate to sort column ascending" [ref=e150] [cursor=pointer]': ↑ Status ↓
+                    - 'columnheader "Last Updated: activate to sort column ascending" [ref=e151] [cursor=pointer]': ↑ Last Updated ↓
+                    - 'columnheader "Created By: activate to sort column ascending" [ref=e152] [cursor=pointer]': ↑ Created By ↓
+                - rowgroup [ref=e153]:
+                  - row "1 c1 Test Widget 50 0 OK 2026-05-02 17:59 admin" [ref=e154]:
+                    - gridcell "1" [ref=e155]
+                    - gridcell "c1" [ref=e156]
+                    - gridcell "Test Widget" [ref=e157]
+                    - gridcell "50" [ref=e158]
+                    - gridcell "0" [ref=e159]
+                    - gridcell "OK" [ref=e160]
+                    - gridcell "2026-05-02 17:59" [ref=e161]
+                    - gridcell "admin" [ref=e162]
+                  - row "2 c1 i1 7 0 OK 2026-05-02 17:36" [ref=e163]:
+                    - gridcell "2" [ref=e164]
+                    - gridcell "c1" [ref=e165]
+                    - gridcell "i1" [ref=e166]
+                    - gridcell "7" [ref=e167]
+                    - gridcell "0" [ref=e168]
+                    - gridcell "OK" [ref=e169]
+                    - gridcell "2026-05-02 17:36" [ref=e170]
+                    - gridcell [ref=e171]
+              - generic [ref=e172]:
+                - link "<<" [ref=e173] [cursor=pointer]:
+                  - /url: "#"
+                - link "1" [ref=e174] [cursor=pointer]:
+                  - /url: "#"
+                - link ">>" [ref=e175] [cursor=pointer]:
+                  - /url: "#"
+            - generic [ref=e176]:
+              - list [ref=e179]:
+                - listitem [ref=e180]:
+                  - link "Prev":
+                    - /url: "#"
+                - listitem [ref=e181]:
+                  - link "1" [ref=e182] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=e183]:
+                  - link "Next":
+                    - /url: "#"
+              - status [ref=e185]: 1 -2 of 2
+          - button " Download as CSV" [ref=e188] [cursor=pointer]:
+            - emphasis [ref=e189]: 
+            - text: Download as CSV
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - text: © 2026 Stock Inventory by
+          - link "John Doe" [ref=e194] [cursor=pointer]:
+            - /url: javascript:void
+        - generic:
+          - list
+  - log [ref=e195]
+  - log [ref=e196]
+  - log [ref=e197]
+  - log [ref=e198]
+  - log [ref=e199]
+  - log [ref=e200]
+  - log [ref=e201]
+  - log [ref=e202]
+  - log [ref=e203]
+  - log [ref=e204]

@@ -51,52 +51,67 @@
             - /url: /contacts
             - emphasis [ref=e58]: 
             - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
         - text: 
-    - generic [ref=e60]:
-      - generic [ref=e63]:
-        - link "" [ref=e65] [cursor=pointer]:
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - link "" [ref=e70] [cursor=pointer]:
           - /url: "#"
-          - emphasis [ref=e66]: 
-        - link "logo logo-dark" [ref=e68] [cursor=pointer]:
+          - emphasis [ref=e71]: 
+        - link "logo logo-dark" [ref=e73] [cursor=pointer]:
           - /url: /
-          - img "logo" [ref=e69]
-          - img "logo-dark" [ref=e70]
-        - generic [ref=e71]:
-          - emphasis [ref=e72]: 
-          - textbox "Search anything" [ref=e73]
-        - list [ref=e75]:
-          - listitem [ref=e76]:
-            - link "" [ref=e77] [cursor=pointer]:
+          - img "logo" [ref=e74]
+          - img "logo-dark" [ref=e75]
+        - generic [ref=e76]:
+          - emphasis [ref=e77]: 
+          - textbox "Search anything" [ref=e78]
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - link "" [ref=e82] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e78]:
-                - emphasis [ref=e80]: 
+              - generic [ref=e83]:
+                - emphasis [ref=e85]: 
                 - text: 
             - text:  
-      - generic [ref=e86]:
-        - generic [ref=e87]:
-          - generic [ref=e90]:
-            - img [ref=e91]
-            - textbox "Search Contacts..." [ref=e94]
-          - generic [ref=e95]:
-            - generic [ref=e96]:
-              - img [ref=e98] [cursor=pointer]
-              - generic [ref=e101]:
-                - img [ref=e102] [cursor=pointer]
-                - img [ref=e103] [cursor=pointer]
-            - text: 
-        - generic [ref=e110]:
-          - heading "Name" [level=4] [ref=e112]
-          - heading "Email" [level=4] [ref=e114]
-          - heading "Location" [level=4] [ref=e116]
-          - heading "Phone" [level=4] [ref=e118]
-          - img [ref=e120] [cursor=pointer]
-      - generic [ref=e124]:
-        - generic [ref=e125]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic:
+            - generic:
+              - heading [level=3]
+        - generic [ref=e96]:
+          - heading "Add Stock" [level=5] [ref=e98]
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101] [cursor=pointer]: Category
+              - combobox "Category" [ref=e103]:
+                - option "---------" [selected]
+                - option "c1"
+                - option "g1"
+            - generic [ref=e104]:
+              - generic [ref=e105] [cursor=pointer]: Item name
+              - textbox "Item name" [ref=e107]
+            - generic [ref=e108]:
+              - generic [ref=e109] [cursor=pointer]: Quantity
+              - spinbutton "Quantity" [ref=e111]: "0"
+            - generic [ref=e112]:
+              - generic [ref=e113] [cursor=pointer]: Image
+              - button "Image" [ref=e115]
+            - generic [ref=e116]:
+              - generic [ref=e117] [cursor=pointer]: Date*
+              - textbox "Date*" [ref=e119]
+            - button "Submit" [ref=e120] [cursor=pointer]
+      - generic [ref=e123]:
+        - generic [ref=e124]:
           - text: © 2026 Stock Inventory by
-          - link "John Doe" [ref=e126] [cursor=pointer]:
+          - link "John Doe" [ref=e125] [cursor=pointer]:
             - /url: javascript:void
         - generic:
           - list
+  - log [ref=e126]
   - log [ref=e127]
   - log [ref=e128]
   - log [ref=e129]

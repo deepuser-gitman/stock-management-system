@@ -8,10 +8,10 @@
           - img "logo-dark" [ref=e9]
           - img "logo-small" [ref=e10]
         - generic [ref=e11]:
-          - link "" [ref=e12] [cursor=pointer]:
+          - text: 
+          - link "" [ref=e12] [cursor=pointer]:
             - /url: "#"
-            - emphasis [ref=e13]: 
-          - text: 
+            - emphasis [ref=e13]: 
       - list [ref=e22]:
         - listitem [ref=e23]:
           - heading "Navigation" [level=6] [ref=e24]
@@ -51,26 +51,25 @@
             - /url: /contacts
             - emphasis [ref=e58]: 
             - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
         - text: 
-    - generic [ref=e60]:
-      - generic [ref=e63]:
-        - link "" [ref=e65] [cursor=pointer]:
-          - /url: "#"
-          - emphasis [ref=e66]: 
-        - link "logo logo-dark" [ref=e68] [cursor=pointer]:
-          - /url: /
-          - img "logo" [ref=e69]
-          - img "logo-dark" [ref=e70]
-        - generic [ref=e71]:
-          - emphasis [ref=e72]: 
-          - textbox "Search anything" [ref=e73]
-        - list [ref=e75]:
-          - listitem [ref=e76]:
-            - link "" [ref=e77] [cursor=pointer]:
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - text: 
+        - generic [ref=e69]:
+          - emphasis [ref=e70]: 
+          - textbox "Search anything" [ref=e71]
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - link " admin " [ref=e75] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e78]:
-                - emphasis [ref=e80]: 
-                - text: 
+              - generic [ref=e76]:
+                - emphasis [ref=e78]: 
+                - generic [ref=e80]: admin 
             - text:  
       - generic [ref=e84]:
         - generic [ref=e86]:
@@ -80,16 +79,16 @@
             - list [ref=e92]:
               - listitem [ref=e93]:
                 - link " Reports" [ref=e94] [cursor=pointer]:
-                  - /url: /view_history
+                  - /url: /reports
                   - emphasis [ref=e95]: 
                   - generic [ref=e96]: Reports
         - generic [ref=e98]:
           - generic [ref=e102]:
             - heading "Total Stocks" [level=6] [ref=e105]
-            - generic [ref=e108]: "1"
+            - generic [ref=e108]: "2"
           - generic [ref=e114]:
             - heading "Total History" [level=6] [ref=e117]
-            - generic [ref=e120]: "0"
+            - generic [ref=e120]: "2"
           - generic [ref=e126]:
             - heading "Total Categories" [level=6] [ref=e129]
             - generic [ref=e132]: "2"
@@ -97,37 +96,38 @@
             - heading "Today's Visitors" [level=6] [ref=e141]
             - generic [ref=e144]: "1"
           - generic [ref=e150]:
-            - heading "Stock Statistics based on Item name" [level=6] [ref=e153]
-            - generic [ref=e157]: 2nd May 2026 17:34
-          - generic [ref=e161]:
-            - heading "Stock Statistics based on Item name" [level=6] [ref=e164]
-            - generic [ref=e168]: 2nd May 2026 17:34
-          - generic [ref=e172]:
-            - heading "Stock Statistics based on Category" [level=6] [ref=e175]
-            - generic [ref=e179]: 2nd May 2026 17:34
-          - generic [ref=e180]:
-            - heading "Stock History Analytics based on Category" [level=4] [ref=e183]
-            - generic [ref=e184]:
-              - heading "Recently Issued" [level=6] [ref=e189]
-              - heading "Recently Received" [level=6] [ref=e196]
-          - generic [ref=e199]:
-            - heading "Stock History Analytics based on Item name" [level=4] [ref=e202]
-            - generic [ref=e203]:
-              - heading "Recently Issued" [level=6] [ref=e208]
-              - heading "Recently Received" [level=6] [ref=e215]
-      - generic [ref=e220]:
-        - generic [ref=e221]:
-          - text: © 2026 Stock Inventory by
-          - link "John Doe" [ref=e222] [cursor=pointer]:
-            - /url: javascript:void
-        - generic:
-          - list
-  - log [ref=e223]
-  - log [ref=e224]
-  - log [ref=e225]
-  - log [ref=e226]
-  - log [ref=e227]
-  - log [ref=e228]
-  - log [ref=e229]
-  - log [ref=e230]
-  - log [ref=e231]
+            - heading "Low Stock Alerts" [level=6] [ref=e153]
+            - generic [ref=e156]: "0"
+          - generic [ref=e160]:
+            - heading "Stock Statistics based on Item name" [level=6] [ref=e163]
+            - generic [ref=e167]: 2nd May 2026 18:16
+          - generic [ref=e171]:
+            - heading "Stock Statistics based on Item name" [level=6] [ref=e174]
+            - generic [ref=e178]: 2nd May 2026 18:16
+          - generic [ref=e182]:
+            - heading "Stock Statistics based on Category" [level=6] [ref=e185]
+            - generic [ref=e189]: 2nd May 2026 18:16
+          - generic [ref=e190]:
+            - heading "Stock History Analytics based on Category" [level=4] [ref=e193]
+            - generic [ref=e194]:
+              - heading "Recently Issued" [level=6] [ref=e199]
+              - heading "Recently Received" [level=6] [ref=e206]
+          - generic [ref=e209]:
+            - heading "Stock History Analytics based on Item name" [level=4] [ref=e212]
+            - generic [ref=e213]:
+              - heading "Recently Issued" [level=6] [ref=e218]
+              - heading "Recently Received" [level=6] [ref=e225]
+      - generic [ref=e231]:
+        - text: © 2021 Stock Inventory by
+        - link "John Doe" [ref=e232] [cursor=pointer]:
+          - /url: "#"
+  - log [ref=e233]
+  - log [ref=e234]
+  - log [ref=e235]
+  - log [ref=e236]
+  - log [ref=e237]
+  - log [ref=e238]
+  - log [ref=e239]
+  - log [ref=e240]
+  - log [ref=e241]
+  - log [ref=e242]

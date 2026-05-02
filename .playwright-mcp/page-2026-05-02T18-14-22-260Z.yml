@@ -1,0 +1,112 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "logo logo-dark logo-small" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e8]
+          - img "logo-dark" [ref=e9]
+          - img "logo-small" [ref=e10]
+        - generic [ref=e11]:
+          - text: 
+          - link "" [ref=e12] [cursor=pointer]:
+            - /url: "#"
+            - emphasis [ref=e13]: 
+      - list [ref=e22]:
+        - listitem [ref=e23]:
+          - heading "Navigation" [level=6] [ref=e24]
+        - listitem [ref=e25]:
+          - link " Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+            - emphasis [ref=e28]: 
+            - generic [ref=e29]: Home
+        - listitem [ref=e30]:
+          - link " Add Stock" [ref=e31] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e33]: 
+            - generic [ref=e34]: Add Stock
+        - listitem [ref=e35]:
+          - link " View Stock" [ref=e36] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e38]: 
+            - generic [ref=e39]: View Stock
+        - listitem [ref=e40]:
+          - link " View History" [ref=e41] [cursor=pointer]:
+            - /url: /view_history
+            - emphasis [ref=e43]: 
+            - generic [ref=e44]: View History
+        - listitem [ref=e45]:
+          - link " Add Dependent Forms" [ref=e46] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e48]: 
+            - generic [ref=e49]: Add Dependent Forms
+        - listitem [ref=e50]:
+          - link " View Dependent Forms" [ref=e51] [cursor=pointer]:
+            - /url: /depend_form_view
+            - emphasis [ref=e53]: 
+            - generic [ref=e54]: View Dependent Forms
+        - text: 
+        - listitem [ref=e55]:
+          - link " Contacts" [ref=e56] [cursor=pointer]:
+            - /url: /contacts
+            - emphasis [ref=e58]: 
+            - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
+        - text: 
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - text: 
+        - generic [ref=e69]:
+          - emphasis [ref=e70]: 
+          - textbox "Search anything" [ref=e71]
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - link " admin " [ref=e75] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e76]:
+                - emphasis [ref=e78]: 
+                - generic [ref=e80]: admin 
+            - text:  
+      - generic [ref=e84]:
+        - generic [ref=e86]:
+          - heading "Contacts" [level=3] [ref=e88]
+          - generic [ref=e90]:
+            - textbox "Search contacts..." [ref=e91]
+            - button " Add Contact" [ref=e92] [cursor=pointer]:
+              - emphasis [ref=e93]: 
+              - text: Add Contact
+        - table [ref=e97]:
+          - rowgroup [ref=e98]:
+            - row "# Name Email Occupation Phone Location Actions" [ref=e99]:
+              - columnheader "#" [ref=e100]
+              - columnheader "Name" [ref=e101]
+              - columnheader "Email" [ref=e102]
+              - columnheader "Occupation" [ref=e103]
+              - columnheader "Phone" [ref=e104]
+              - columnheader "Location" [ref=e105]
+              - columnheader "Actions" [ref=e106]
+          - rowgroup [ref=e107]:
+            - row "No contacts yet. Click Add Contact to get started." [ref=e108]:
+              - cell "No contacts yet. Click Add Contact to get started." [ref=e109]:
+                - text: No contacts yet. Click
+                - strong [ref=e110]: Add Contact
+                - text: to get started.
+      - text: 
+      - generic [ref=e114]:
+        - text: © 2021 Stock Inventory by
+        - link "John Doe" [ref=e115] [cursor=pointer]:
+          - /url: "#"
+  - log [ref=e116]
+  - log [ref=e117]
+  - log [ref=e118]
+  - log [ref=e119]
+  - log [ref=e120]
+  - log [ref=e121]
+  - log [ref=e122]
+  - log [ref=e123]
+  - log [ref=e124]
+  - log [ref=e125]

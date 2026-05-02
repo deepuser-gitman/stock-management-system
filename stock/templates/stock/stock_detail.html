@@ -1,128 +1,152 @@
-
 {% load static %}
 {% load crispy_forms_tags %}
 
 {% include 'stock/headers.html' %}
 
+<div class="nk-content">
+  <div class="container-fluid">
+    <div class="nk-content-inner">
+      <div class="nk-content-body">
 
-<div class="nk-content ">
-    <div class="container-fluid">
-        <div class="nk-content-inner">
-            <div class="nk-content-body">
-                <div class="components-preview wide-md mx-auto">
-                     <div class="nk-block nk-block-lg">
-                                        <div class="nk-block-head">
-                                            <div class="nk-block-head-content">
-                                                <h4 class="nk-block-title">Stock Details</h4>
-                                            </div>
-                                        </div>
-                         <div class="pt-5 pb-3">
-                         <a href="{% url 'issue_item' detail.id %}"><div class='btn btn-primary'>ISSUE THIS ITEM</div></a>
-                         <a href="{% url 'receive_item' detail.id %}"><div class='btn btn-success'>RECEIVE THIS ITEM</div></a>
-                         </div>
-
-                                        <table class="datatable-init nowrap nk-tb-list is-separate" data-auto-responsive="false">
-                                            <thead>
-                                                <tr class="nk-tb-item nk-tb-head">
-                                                    <th class="nk-tb-col tb-col-sm"><span>ITEM NAME</span></th>
-                                                    <th class="nk-tb-col"><span>QUANTITY IN STORE</span></th>
-                                                    <th class="nk-tb-col"><span>LAST UPDATED</span></th>
-                                                    <th class="nk-tb-col tb-col-md"><span>REORDER LEVEL</span></th>
-                                                     <th class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1 my-n1">
-                                                            <li class="mr-n1">
-                                                                <div class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </th>
-                                                </tr><!-- .nk-tb-item -->
-                                            </thead>
-                                            <tbody>
-
-
-
-
-                                                <tr class="nk-tb-item">
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-sub">{{detail.item_name}}</span>
-                                                    </td>
-                                                   <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{detail.quantity}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{detail.last_updated}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-sub">{{detail.re_order}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1 my-n1">
-                                                            <li class="mr-n1">
-                                                                <div class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                                        <ul class="link-list-opt no-bdr">
-                                                                            <li><a href="{% url 'issue_item' detail.id %}"><em class="icon ni ni-edit"></em><span>Issue Item</span></a></li>
-                                                                            <li><a href="{% url 'receive_item' detail.id %}"><em class="icon ni ni-tranx-fill"></em><span>Receive Item</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr><!-- .nk-tb-item -->
-
-
-
-
-
-
-
-                                            </tbody>
-                                        </table><!-- .nk-tb-list -->
-                                    </div> <!-- nk-block -->
-
-                </div>
+        <div class="nk-block-head nk-block-head-sm">
+          <div class="nk-block-between">
+            <div class="nk-block-head-content">
+              <h3 class="nk-block-title page-title">Stock Detail: {{ detail.item_name }}</h3>
             </div>
+            <div class="nk-block-head-content">
+              <a href="{% url 'view_stock' %}" class="btn btn-outline-secondary btn-sm">
+                <em class="icon ni ni-arrow-left"></em> Back to Stock
+              </a>
+            </div>
+          </div>
         </div>
+
+        <div class="row g-gs">
+          <!-- Detail card -->
+          <div class="col-lg-5">
+            <div class="card card-bordered h-100">
+              <div class="card-inner">
+                <h5 class="card-title">Item Information</h5>
+                {% if detail.image %}
+                <div class="mb-3 text-center">
+                  <img src="{{ detail.image.url }}" alt="{{ detail.item_name }}"
+                       class="img-fluid rounded" style="max-height:200px;">
+                </div>
+                {% endif %}
+                <table class="table table-sm">
+                  <tr><th>Item Name</th><td>{{ detail.item_name }}</td></tr>
+                  <tr><th>Category</th><td>{{ detail.category }}</td></tr>
+                  <tr>
+                    <th>Quantity in Store</th>
+                    <td>
+                      <span class="{% if detail.quantity <= detail.re_order %}text-danger fw-bold{% else %}text-success fw-bold{% endif %}">
+                        {{ detail.quantity }}
+                      </span>
+                      {% if detail.quantity <= detail.re_order %}
+                      <span class="badge bg-danger ms-1">Low Stock</span>
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr><th>Reorder Level</th><td>{{ detail.re_order }}</td></tr>
+                  <tr><th>Last Updated</th><td>{{ detail.last_updated|date:"Y-m-d H:i" }}</td></tr>
+                  <tr><th>Created By</th><td>{{ detail.created_by|default:"-" }}</td></tr>
+                  <tr><th>Last Issued By</th><td>{{ detail.issued_by|default:"-" }}</td></tr>
+                  <tr><th>Last Issued To</th><td>{{ detail.issued_to|default:"-" }}</td></tr>
+                  <tr><th>Last Received By</th><td>{{ detail.received_by|default:"-" }}</td></tr>
+                </table>
+
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <a href="{% url 'issue_item' detail.id %}" class="btn btn-warning btn-sm">
+                    <em class="icon ni ni-arrow-up-right"></em> Issue
+                  </a>
+                  <a href="{% url 'receive_item' detail.id %}" class="btn btn-success btn-sm">
+                    <em class="icon ni ni-arrow-down-left"></em> Receive
+                  </a>
+                  <a href="{% url 'update_stock' detail.id %}" class="btn btn-info btn-sm">
+                    <em class="icon ni ni-edit"></em> Edit
+                  </a>
+                  <a href="{% url 're_order' detail.id %}" class="btn btn-secondary btn-sm">
+                    <em class="icon ni ni-activity-round"></em> Reorder Level
+                  </a>
+                  <a href="javascript:void(0)" class="btn btn-danger btn-sm"
+                     onclick="confirmDelete('{% url 'delete_stock' detail.id %}', '{{ detail.item_name|escapejs }}')">
+                    <em class="icon ni ni-trash"></em> Delete
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent history -->
+          <div class="col-lg-7">
+            <div class="card card-bordered h-100">
+              <div class="card-inner">
+                <h5 class="card-title">Recent Transaction History</h5>
+                {% if history %}
+                <div class="table-responsive">
+                  <table class="table table-sm table-hover">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Qty</th>
+                        <th>Issued</th>
+                        <th>Received</th>
+                        <th>By</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for h in history %}
+                      <tr>
+                        <td>{{ h.last_updated|date:"Y-m-d H:i"|default:"-" }}</td>
+                        <td>{{ h.quantity }}</td>
+                        <td>
+                          {% if h.issue_quantity %}
+                          <span class="badge bg-warning text-dark">{{ h.issue_quantity }}</span>
+                          {% else %}-{% endif %}
+                        </td>
+                        <td>
+                          {% if h.receive_quantity %}
+                          <span class="badge bg-success">{{ h.receive_quantity }}</span>
+                          {% else %}-{% endif %}
+                        </td>
+                        <td>{{ h.issued_by|default:h.received_by|default:"-" }}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+                <a href="{% url 'view_history' %}?item_name={{ detail.item_name }}" class="btn btn-sm btn-outline-primary mt-2">
+                  View Full History
+                </a>
+                {% else %}
+                <p class="text-muted">No transaction history yet.</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {% include 'stock/footers.html' %}
-{% if messages %}
-{% for message in messages %}
-{% if message.tags %}
-    <script>
-        Swal.fire({
-  position: 'center',
-  icon: '{{ message.tags }}',
-  title: '{{message}}',
-  showConfirmButton: true,
-  timer: 15000
-})
-    </script>
-{% endif %}
-{% endfor %}
-{% endif %}
 
+<script>
+function confirmDelete(url, name) {
+  Swal.fire({
+    title: 'Delete "' + name + '"?',
+    text: "This action cannot be undone.",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#e85347',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Yes, delete it',
+  }).then(function(result) {
+    if (result.isConfirmed) {
+      window.location.href = url;
+    }
+  });
+}
+</script>

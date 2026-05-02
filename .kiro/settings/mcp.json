@@ -12,7 +12,13 @@
         "browser_wait_for",
         "browser_fill_form",
         "browser_click",
-        "browser_console_messages"
+        "browser_console_messages",
+        "browser_tabs",
+        "browser_run_code_unsafe",
+        "browser_close",
+        "browser_take_screenshot",
+        "browser_evaluate",
+        "browser_resize"
       ]
     }
   }

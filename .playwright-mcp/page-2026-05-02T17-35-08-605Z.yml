@@ -155,7 +155,7 @@
         - button "Submit" [ref=e168] [cursor=pointer]
       - generic [ref=e171]:
         - generic [ref=e172]:
-          - text: © 2021 Stock Inventory by
+          - text: © 2026 Stock Inventory by
           - link "John Doe" [ref=e173] [cursor=pointer]:
             - /url: javascript:void
         - generic:

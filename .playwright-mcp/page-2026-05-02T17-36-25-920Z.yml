@@ -135,7 +135,7 @@
                   - text: Next
             - status [ref=e143]: 1 -1 of 1
       - generic [ref=e147]:
-        - text: © 2021 Stock Inventory by
+        - text: © 2026 Stock Inventory by
         - link [ref=e148] [cursor=pointer]:
           - /url: javascript:void
           - text: John Doe

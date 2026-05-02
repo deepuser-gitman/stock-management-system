@@ -1,0 +1,211 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e8]
+          - img [ref=e9]
+          - img [ref=e10]
+        - generic [ref=e11]:
+          - link [ref=e12] [cursor=pointer]:
+            - /url: "#"
+            - emphasis [ref=e13]: 
+          - text: 
+      - list [ref=e22]:
+        - listitem [ref=e23]:
+          - heading [level=6] [ref=e24]: Navigation
+        - listitem [ref=e25]:
+          - link [ref=e26] [cursor=pointer]:
+            - /url: /
+            - emphasis [ref=e28]: 
+            - generic [ref=e29]: Home
+        - listitem [ref=e30]:
+          - link [ref=e31] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e33]: 
+            - generic [ref=e34]: Add Stock
+        - listitem [ref=e35]:
+          - link [ref=e36] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e38]: 
+            - generic [ref=e39]: View Stock
+        - listitem [ref=e40]:
+          - link [ref=e41] [cursor=pointer]:
+            - /url: /view_history
+            - emphasis [ref=e43]: 
+            - generic [ref=e44]: View History
+        - listitem [ref=e45]:
+          - link [ref=e46] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e48]: 
+            - generic [ref=e49]: Add Dependent Forms
+        - listitem [ref=e50]:
+          - link [ref=e51] [cursor=pointer]:
+            - /url: /depend_form_view
+            - emphasis [ref=e53]: 
+            - generic [ref=e54]: View Dependent Forms
+        - text: 
+        - listitem [ref=e55]:
+          - link [ref=e56] [cursor=pointer]:
+            - /url: /contacts
+            - emphasis [ref=e58]: 
+            - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
+        - text: 
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - link [ref=e70] [cursor=pointer]:
+          - /url: "#"
+          - emphasis [ref=e71]: 
+        - link [ref=e73] [cursor=pointer]:
+          - /url: /
+          - img [ref=e74]
+          - img [ref=e75]
+        - generic [ref=e76]:
+          - emphasis [ref=e77]: 
+          - textbox [ref=e78]:
+            - /placeholder: Search anything
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - link [ref=e82] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e83]:
+                - emphasis [ref=e85]: 
+                - text: 
+            - text:  
+      - generic [ref=e89]:
+        - generic [ref=e91]:
+          - heading [level=3] [ref=e93]: VIEW STOCKS
+          - link [ref=e95] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e96]: 
+            - generic [ref=e97]: Add Stock
+        - generic [ref=e99]:
+          - heading [level=6] [ref=e100]: Search & Filter
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - generic [ref=e104] [cursor=pointer]: Category
+                - combobox [ref=e105]
+              - generic [ref=e106]:
+                - generic [ref=e107] [cursor=pointer]: Item Name
+                - textbox [ref=e108]
+              - generic [ref=e109]:
+                - generic [ref=e110] [cursor=pointer]: Min Qty
+                - spinbutton [ref=e111]
+              - generic [ref=e112]:
+                - generic [ref=e113] [cursor=pointer]: Max Qty
+                - spinbutton [ref=e114]
+              - generic [ref=e115]:
+                - button [ref=e116] [cursor=pointer]: Search
+                - link [ref=e117] [cursor=pointer]:
+                  - /url: /view_stock
+                  - text: Reset
+            - generic [ref=e120]:
+              - checkbox [ref=e121]
+              - generic [ref=e122] [cursor=pointer]: Export to CSV
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - searchbox [ref=e129]
+            - generic [ref=e133] [cursor=pointer]:
+              - generic [ref=e134]: Show
+              - generic [ref=e135]:
+                - combobox [ref=e136]
+                - text: 
+          - grid [ref=e138]:
+            - rowgroup [ref=e139]:
+              - row [ref=e140]:
+                - columnheader [ref=e141] [cursor=pointer]: "↑ # ↓"
+                - columnheader [ref=e142] [cursor=pointer]: ↑ STOCK NAME ↓
+                - columnheader [ref=e143] [cursor=pointer]: ↑ CATEGORY ↓
+                - columnheader [ref=e144] [cursor=pointer]: ↑ REORDER LEVEL ↓
+                - columnheader [ref=e145] [cursor=pointer]: ↑ QUANTITY ↓
+                - columnheader [ref=e146] [cursor=pointer]: ↑ LAST UPDATED ↓
+                - columnheader [ref=e147] [cursor=pointer]: ↑ CREATED BY ↓
+                - columnheader
+            - rowgroup [ref=e148]:
+              - row [ref=e149]:
+                - gridcell [ref=e150]: "1"
+                - gridcell [ref=e151]:
+                  - link [ref=e154] [cursor=pointer]:
+                    - /url: /stock_detail/2/
+                    - text: Test Widget
+                - gridcell [ref=e155]:
+                  - generic [ref=e156]: c1
+                - gridcell [ref=e157]:
+                  - link [ref=e159] [cursor=pointer]:
+                    - /url: /re_order/2/
+                    - text: "0"
+                - gridcell [ref=e160]: "50"
+                - gridcell [ref=e161]: 2026-05-02 17:59
+                - gridcell [ref=e162]: admin
+                - gridcell:
+                  - list [ref=e163]:
+                    - listitem [ref=e164]:
+                      - generic [ref=e165]:
+                        - link [ref=e166] [cursor=pointer]:
+                          - /url: "#"
+                          - emphasis [ref=e167]: 
+                        - text:      
+              - row [ref=e168]:
+                - gridcell [ref=e169]: "2"
+                - gridcell [ref=e170]:
+                  - link [ref=e173] [cursor=pointer]:
+                    - /url: /stock_detail/1/
+                    - text: i1
+                - gridcell [ref=e174]:
+                  - generic [ref=e175]: c1
+                - gridcell [ref=e176]:
+                  - link [ref=e178] [cursor=pointer]:
+                    - /url: /re_order/1/
+                    - text: "0"
+                - gridcell [ref=e179]: "7"
+                - gridcell [ref=e180]: 2026-05-02 17:36
+                - gridcell [ref=e181]: "-"
+                - gridcell:
+                  - list [ref=e182]:
+                    - listitem [ref=e183]:
+                      - generic [ref=e184]:
+                        - link [ref=e185] [cursor=pointer]:
+                          - /url: "#"
+                          - emphasis [ref=e186]: 
+                        - text:      
+          - generic [ref=e187]:
+            - list [ref=e190]:
+              - listitem [ref=e191]:
+                - link:
+                  - /url: "#"
+                  - text: Prev
+              - listitem [ref=e192]:
+                - link [ref=e193] [cursor=pointer]:
+                  - /url: "#"
+                  - text: "1"
+              - listitem [ref=e194]:
+                - link:
+                  - /url: "#"
+                  - text: Next
+            - status [ref=e196]: 1 -2 of 2
+      - generic [ref=e200]:
+        - text: © 2026 Stock Inventory by
+        - link [ref=e201] [cursor=pointer]:
+          - /url: javascript:void
+          - text: John Doe
+  - dialog "\"Test Widget\" added successfully." [ref=e203]:
+    - heading "\"Test Widget\" added successfully." [level=2] [ref=e212]
+    - generic: "!"
+    - button "OK" [active] [ref=e214] [cursor=pointer]
+  - log [ref=e216]
+  - log [ref=e217]
+  - log [ref=e218]
+  - log [ref=e219]
+  - log [ref=e220]
+  - log [ref=e221]
+  - log [ref=e222]
+  - log [ref=e223]
+  - log [ref=e224]
+  - log [ref=e225]

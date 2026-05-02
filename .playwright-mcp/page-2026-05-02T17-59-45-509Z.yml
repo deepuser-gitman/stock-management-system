@@ -1,0 +1,137 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "logo logo-dark logo-small" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e8]
+          - img "logo-dark" [ref=e9]
+          - img "logo-small" [ref=e10]
+        - generic [ref=e11]:
+          - link "" [ref=e12] [cursor=pointer]:
+            - /url: "#"
+            - emphasis [ref=e13]: 
+          - text: 
+      - list [ref=e22]:
+        - listitem [ref=e23]:
+          - heading "Navigation" [level=6] [ref=e24]
+        - listitem [ref=e25]:
+          - link " Home" [ref=e26] [cursor=pointer]:
+            - /url: /
+            - emphasis [ref=e28]: 
+            - generic [ref=e29]: Home
+        - listitem [ref=e30]:
+          - link " Add Stock" [ref=e31] [cursor=pointer]:
+            - /url: /add_stock
+            - emphasis [ref=e33]: 
+            - generic [ref=e34]: Add Stock
+        - listitem [ref=e35]:
+          - link " View Stock" [ref=e36] [cursor=pointer]:
+            - /url: /view_stock
+            - emphasis [ref=e38]: 
+            - generic [ref=e39]: View Stock
+        - listitem [ref=e40]:
+          - link " View History" [ref=e41] [cursor=pointer]:
+            - /url: /view_history
+            - emphasis [ref=e43]: 
+            - generic [ref=e44]: View History
+        - listitem [ref=e45]:
+          - link " Add Dependent Forms" [ref=e46] [cursor=pointer]:
+            - /url: /dependent_forms
+            - emphasis [ref=e48]: 
+            - generic [ref=e49]: Add Dependent Forms
+        - listitem [ref=e50]:
+          - link " View Dependent Forms" [ref=e51] [cursor=pointer]:
+            - /url: /depend_form_view
+            - emphasis [ref=e53]: 
+            - generic [ref=e54]: View Dependent Forms
+        - text: 
+        - listitem [ref=e55]:
+          - link " Contacts" [ref=e56] [cursor=pointer]:
+            - /url: /contacts
+            - emphasis [ref=e58]: 
+            - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
+        - text: 
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - link "" [ref=e70] [cursor=pointer]:
+          - /url: "#"
+          - emphasis [ref=e71]: 
+        - link "logo logo-dark" [ref=e73] [cursor=pointer]:
+          - /url: /
+          - img "logo" [ref=e74]
+          - img "logo-dark" [ref=e75]
+        - generic [ref=e76]:
+          - emphasis [ref=e77]: 
+          - textbox "Search anything" [ref=e78]
+        - list [ref=e80]:
+          - listitem [ref=e81]:
+            - link "" [ref=e82] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e83]:
+                - emphasis [ref=e85]: 
+                - text: 
+            - text:  
+      - generic [ref=e89]:
+        - generic [ref=e92]:
+          - heading "Reports" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Generate and export reports for stock, transactions, and alerts.
+        - generic [ref=e96]:
+          - heading "Report Parameters" [level=6] [ref=e97]
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101] [cursor=pointer]: Report Type
+              - combobox [ref=e102]:
+                - option "Stock Summary" [selected]
+                - option "Low Stock / Reorder Alert"
+                - option "Issue Report"
+                - option "Receive Report"
+                - option "Full Transaction History"
+            - generic [ref=e103]:
+              - generic [ref=e104] [cursor=pointer]: Format
+              - combobox [ref=e105]:
+                - option "View in Browser" [selected]
+                - option "Download CSV"
+            - generic [ref=e106]:
+              - generic [ref=e107] [cursor=pointer]: Category
+              - combobox [ref=e108]:
+                - option "All Categories" [selected]
+                - option "c1"
+                - option "g1"
+            - generic [ref=e109]:
+              - generic [ref=e110] [cursor=pointer]: Item Name (contains)
+              - textbox [ref=e111]
+            - generic [ref=e112]:
+              - generic [ref=e113] [cursor=pointer]: From Date
+              - textbox [ref=e114]
+            - generic [ref=e115]:
+              - generic [ref=e116] [cursor=pointer]: To Date
+              - textbox [ref=e117]
+            - generic [ref=e118]:
+              - button " Generate Report" [ref=e119] [cursor=pointer]:
+                - emphasis [ref=e120]: 
+                - text: Generate Report
+              - link "Reset" [ref=e121] [cursor=pointer]:
+                - /url: /reports
+      - generic [ref=e124]:
+        - generic [ref=e125]:
+          - text: © 2026 Stock Inventory by
+          - link "John Doe" [ref=e126] [cursor=pointer]:
+            - /url: javascript:void
+        - generic:
+          - list
+  - log [ref=e127]
+  - log [ref=e128]
+  - log [ref=e129]
+  - log [ref=e130]
+  - log [ref=e131]
+  - log [ref=e132]
+  - log [ref=e133]
+  - log [ref=e134]
+  - log [ref=e135]
+  - log [ref=e136]

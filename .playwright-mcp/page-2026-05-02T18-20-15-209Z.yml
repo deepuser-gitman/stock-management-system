@@ -8,10 +8,10 @@
           - img "logo-dark" [ref=e9]
           - img "logo-small" [ref=e10]
         - generic [ref=e11]:
-          - link "" [ref=e12] [cursor=pointer]:
+          - text: 
+          - link "" [ref=e12] [cursor=pointer]:
             - /url: "#"
-            - emphasis [ref=e13]: 
-          - text: 
+            - emphasis [ref=e13]: 
       - list [ref=e22]:
         - listitem [ref=e23]:
           - heading "Navigation" [level=6] [ref=e24]
@@ -51,26 +51,25 @@
             - /url: /contacts
             - emphasis [ref=e58]: 
             - generic [ref=e59]: Contacts
+        - listitem [ref=e60]:
+          - link " Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - emphasis [ref=e63]: 
+            - generic [ref=e64]: Reports
         - text: 
-    - generic [ref=e60]:
-      - generic [ref=e63]:
-        - link "" [ref=e65] [cursor=pointer]:
-          - /url: "#"
-          - emphasis [ref=e66]: 
-        - link "logo logo-dark" [ref=e68] [cursor=pointer]:
-          - /url: /
-          - img "logo" [ref=e69]
-          - img "logo-dark" [ref=e70]
-        - generic [ref=e71]:
-          - emphasis [ref=e72]: 
-          - textbox "Search anything" [ref=e73]
-        - list [ref=e75]:
-          - listitem [ref=e76]:
-            - link "" [ref=e77] [cursor=pointer]:
+    - generic [ref=e65]:
+      - generic [ref=e68]:
+        - text: 
+        - generic [ref=e69]:
+          - emphasis [ref=e70]: 
+          - textbox "Search anything" [ref=e71]
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - link " admin " [ref=e75] [cursor=pointer]:
               - /url: "#"
-              - generic [ref=e78]:
-                - emphasis [ref=e80]: 
-                - text: 
+              - generic [ref=e76]:
+                - emphasis [ref=e78]: 
+                - generic [ref=e80]: admin 
             - text:  
       - generic [ref=e85]:
         - generic [ref=e86]:
@@ -99,13 +98,10 @@
               - generic [ref=e112] [cursor=pointer]: Date*
               - textbox "Date*" [ref=e114]
             - button "Submit" [ref=e115] [cursor=pointer]
-      - generic [ref=e118]:
-        - generic [ref=e119]:
-          - text: © 2026 Stock Inventory by
-          - link "John Doe" [ref=e120] [cursor=pointer]:
-            - /url: javascript:void
-        - generic:
-          - list
+      - generic [ref=e119]:
+        - text: © 2021 Stock Inventory by
+        - link "John Doe" [ref=e120] [cursor=pointer]:
+          - /url: "#"
   - log [ref=e121]
   - log [ref=e122]
   - log [ref=e123]
@@ -115,3 +111,4 @@
   - log [ref=e127]
   - log [ref=e128]
   - log [ref=e129]
+  - log [ref=e130]

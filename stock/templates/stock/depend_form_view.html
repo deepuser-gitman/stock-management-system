@@ -3,151 +3,98 @@
 
 {% include 'stock/headers.html' %}
 
-
-<div class="nk-content ">
-    <div class="container-fluid">
-        <div class="nk-content-inner">
-            <div class="nk-content-body">
-                <div class="components-preview wide-md mx-auto">
-                     <div class="nk-block nk-block-lg">
-                                        <div class="nk-block-head">
-                                            <div class="nk-block-head-content">
-                                                <h4 class="nk-block-title">{{title}}</h4>
-                                            </div>
-                                        </div>
-
-                                        <table class="datatable-init nowrap nk-tb-list is-separate" data-auto-responsive="false">
-                                            <thead>
-                                                <tr class="nk-tb-item nk-tb-head">
-                                                    <th class="nk-tb-col tb-col-sm"><span>COUNT</span></th>
-                                                    <th class="nk-tb-col"><span>ID</span></th>
-                                                    <th class="nk-tb-col"><span>NAME</span></th>
-                                                    <th class="nk-tb-col tb-col-md"><span>COUNTRY</span></th>
-                                                      <th class="nk-tb-col tb-col-md"><span>STATE</span></th>
-                                                      <th class="nk-tb-col tb-col-md"><span>CITY</span></th>
-                                                      <th class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1 my-n1">
-                                                            <li class="mr-n1">
-                                                                <div class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </th>
-                                                </tr><!-- .nk-tb-item -->
-                                            </thead>
-                                            <tbody>
-
-
-
-
-                                                {% for total in view %}
-                                                <tr class="nk-tb-item">
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-sub">{{forloop.counter}}</span>
-                                                    </td>
-                                                   <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{total.id}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-lead">{{total.name}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col">
-                                                        <span class="tb-sub">{{total.country}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col tb-col-md">
-                                                        <span class="tb-sub">{{total.state}}</span>
-                                                    </td>
-                                                    <td class="nk-tb-col tb-col-md">
-                                                        <span class="tb-sub">{{total.city}}</span>
-                                                    </td>
-                                                     <td class="nk-tb-col nk-tb-col-tools">
-                                                        <ul class="nk-tb-actions gx-1 my-n1">
-                                                            <li class="mr-n1">
-                                                                <div class="dropdown">
-                                                                    <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
-                                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                                        <ul class="link-list-opt no-bdr">
-                                                                            <li><a href="{% url 'dependent_update' total.id %}"><em class="icon ni ni-edit"></em><span>Edit Person</span></a></li>
-                                                                            <li><a id="{{forloop.counter}}"  href="javascript:void(0)"><em class="icon ni ni-trash"></em><span>Remove Person</span></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </td>
-                                                </tr><!-- .nk-tb-item -->
-                                             {% endfor %}
-
-
-
-
-
-
-                                            </tbody>
-                                        </table><!-- .nk-tb-list -->
-                                    </div> <!-- nk-block -->
-
-                </div>
+<div class="nk-content">
+  <div class="container-fluid">
+    <div class="nk-content-inner">
+      <div class="nk-content-body">
+        <div class="nk-block-head nk-block-head-sm">
+          <div class="nk-block-between">
+            <div class="nk-block-head-content">
+              <h3 class="nk-block-title page-title">{{ title }}</h3>
             </div>
+            <div class="nk-block-head-content">
+              <a href="{% url 'dependent_forms' %}" class="btn btn-primary">
+                <em class="icon ni ni-plus"></em><span>Add Person</span>
+              </a>
+            </div>
+          </div>
         </div>
+
+        <div class="nk-block nk-block-lg">
+          <table class="{% if view %}datatable-init{% endif %} nowrap nk-tb-list is-separate" data-auto-responsive="false">
+            <thead>
+              <tr class="nk-tb-item nk-tb-head">
+                <th class="nk-tb-col tb-col-sm"><span>#</span></th>
+                <th class="nk-tb-col"><span>NAME</span></th>
+                <th class="nk-tb-col tb-col-md"><span>COUNTRY</span></th>
+                <th class="nk-tb-col tb-col-md"><span>STATE</span></th>
+                <th class="nk-tb-col tb-col-md"><span>CITY</span></th>
+                <th class="nk-tb-col nk-tb-col-tools"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for total in view %}
+              <tr class="nk-tb-item">
+                <td class="nk-tb-col"><span class="tb-sub">{{ forloop.counter }}</span></td>
+                <td class="nk-tb-col"><span class="tb-lead">{{ total.name }}</span></td>
+                <td class="nk-tb-col"><span class="tb-sub">{{ total.country }}</span></td>
+                <td class="nk-tb-col tb-col-md"><span class="tb-sub">{{ total.state }}</span></td>
+                <td class="nk-tb-col tb-col-md"><span class="tb-sub">{{ total.city }}</span></td>
+                <td class="nk-tb-col nk-tb-col-tools">
+                  <ul class="nk-tb-actions gx-1 my-n1">
+                    <li class="mr-n1">
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown">
+                          <em class="icon ni ni-more-h"></em>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <ul class="link-list-opt no-bdr">
+                            <li>
+                              <a href="{% url 'dependent_update' total.id %}">
+                                <em class="icon ni ni-edit"></em><span>Edit</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0)" class="text-danger"
+                                 onclick="confirmDeletePerson('{% url 'delete_dependant' total.id %}', '{{ total.name|escapejs }}')">
+                                <em class="icon ni ni-trash"></em><span>Delete</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              {% empty %}
+              <tr><td colspan="6" class="text-center py-4 text-muted">No people found.</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-
-{% for total in view %}
-<script defer>
-    document.getElementById('{{forloop.counter}}').onclick = function(){
-	const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
-
-swalWithBootstrapButtons.fire({
-  title: 'Are you sure you want to delete {{total.name}}?',
-  text: "You won't be able to revert this!",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonText: '<a href="{% url 'delete_dependant' total.id %}">Delete</a>',
-  cancelButtonText: 'Cancel',
-  reverseButtons: true
-}).then((result) => {
-  if (result.isConfirmed) {
-    swalWithBootstrapButtons.fire({
-       title: 'Deleted!',
-       text: '{{total.name}} has been deleted.',
-       timer: 15000,
-       icon: 'success'
-    })
-  } else if (
-    /* Read more about handling dismissals below */
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.fire(
-      'Cancelled',
-      'Your item is safe :)',
-      'error'
-    )
-  }
-})
-};
-</script>
-{% endfor %}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% include 'stock/footers.html' %}
 
+<script>
+function confirmDeletePerson(url, name) {
+  Swal.fire({
+    title: 'Delete "' + name + '"?',
+    text: "This action cannot be undone.",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#e85347',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Yes, delete',
+    cancelButtonText: 'Cancel',
+  }).then(function(result) {
+    if (result.isConfirmed) {
+      window.location.href = url;
+    }
+  });
+}
+</script>

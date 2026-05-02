@@ -15,7 +15,7 @@
                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
                                 <div class="toggle-expand-content" data-content="pageMenu">
                                     <ul class="nk-block-tools g-3">
-                                        <li class="nk-block-tools-opt"><a href="/view_history" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
+                        <li class="nk-block-tools-opt"><a href="{% url 'reports' %}" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -108,6 +108,53 @@
                                 </div><!-- .nk-ecwg -->
                             </div><!-- .card -->
                         </div><!-- .col -->
+
+                        <!-- Low Stock Alert Card -->
+                        <div class="col-xxl-3 col-sm-6">
+                            <div class="card {% if low_stock_count > 0 %}border-danger{% endif %}">
+                                <div class="nk-ecwg nk-ecwg6">
+                                    <div class="card-inner">
+                                        <div class="card-title-group">
+                                            <div class="card-title">
+                                                <h6 class="title {% if low_stock_count > 0 %}text-danger{% endif %}">Low Stock Alerts</h6>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-group">
+                                                <div class="amount {% if low_stock_count > 0 %}text-danger{% endif %}">{{ low_stock_count }}</div>
+                                            </div>
+                                            {% if low_stock_count > 0 %}
+                                            <a href="{% url 'reports' %}?report_type=low_stock&report_format=html" class="btn btn-sm btn-danger mt-2">View Report</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% if low_stock_items %}
+                        <div class="col-12">
+                            <div class="card card-bordered border-danger">
+                                <div class="card-inner">
+                                    <h6 class="card-title text-danger">⚠ Items Below Reorder Level</h6>
+                                    <table class="table table-sm">
+                                        <thead><tr><th>Item</th><th>Category</th><th>Qty</th><th>Reorder Level</th><th>Action</th></tr></thead>
+                                        <tbody>
+                                        {% for item in low_stock_items %}
+                                        <tr>
+                                            <td><a href="{% url 'stock_detail' item.id %}">{{ item.item_name }}</a></td>
+                                            <td>{{ item.category }}</td>
+                                            <td class="text-danger fw-bold">{{ item.quantity }}</td>
+                                            <td>{{ item.re_order }}</td>
+                                            <td><a href="{% url 'receive_item' item.id %}" class="btn btn-xs btn-success btn-sm">Receive</a></td>
+                                        </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
 
 
 
